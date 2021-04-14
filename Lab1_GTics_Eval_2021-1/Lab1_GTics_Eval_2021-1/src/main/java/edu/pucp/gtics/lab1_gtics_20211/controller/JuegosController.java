@@ -42,8 +42,8 @@ public class JuegosController {
         if (juegosOptional.isPresent()) {
             Juegos juego = juegosOptional.get();
             model.addAttribute("juego", juego);
-            //List<Plataformas> listPlat =  plataformasRepository.findAll();
-            //model.addAttribute("plataformasLista",listPlat);
+            List<Plataformas> listPlat =  plataformasRepository.findAll();
+            model.addAttribute("plataformasLista",listPlat);
             return "/juegos/editar";
         } else {
             return "redirect:/juegos/lista";
