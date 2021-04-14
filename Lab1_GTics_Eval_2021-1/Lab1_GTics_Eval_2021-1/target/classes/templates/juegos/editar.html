@@ -61,14 +61,9 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="small mb-1">Plataforma</label>
-                        <select class="form-select form-select mb-3"  aria-label="Default select example" th:field="*{idplataforma}">
-                            <option value="1">Wii</option>
-                            <option value="2">PlayStation 4</option>
-                            <option value="3">Xbox</option>
-                            <option value="4">Nintendo Switch</option>
-                            <option value="5">PlayStation 5</option>
-                            <option value="10">Xbox Serie X </option>
+                        <label class="mb-3">Plataforma</label>
+                        <select class="form-select form-control"  aria-label=".form-select-sm example" th:field="*{idplataforma}">
+                            <option th:each="platform:${plataformasLista}" th:value="${platform.getIdplataforma()}" th:text="${platform.getNombre()}"></option>
                         </select>
                     </div>
 
